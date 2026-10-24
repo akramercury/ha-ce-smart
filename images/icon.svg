@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF8A3D"/>
+      <stop offset="0.55" stop-color="#F0610F"/>
+      <stop offset="1" stop-color="#C4440A"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- app-icon rounded square -->
+  <rect x="24" y="24" width="464" height="464" rx="108" fill="url(#bg)"/>
+  <rect x="24" y="24" width="464" height="232" rx="108" fill="url(#sheen)"/>
+
+  <!-- house + power mark -->
+  <g filter="url(#soft)">
+    <!-- roof -->
+    <path d="M256 104 L404 224 L368 224 L368 212 L256 150 L144 212 L144 224 L108 224 Z"
+          fill="#ffffff"/>
+    <!-- walls -->
+    <path d="M160 224 L352 224 L352 392 Q352 404 340 404 L172 404 Q160 404 160 392 Z"
+          fill="#ffffff"/>
+    <!-- power symbol cut from the wall -->
+    <g fill="none" stroke="#F0610F" stroke-width="26" stroke-linecap="round">
+      <path d="M256 268 L256 318"/>
+      <path d="M214 286 A58 58 0 1 0 298 286"/>
+    </g>
+  </g>
+</svg>

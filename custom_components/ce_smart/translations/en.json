@@ -1,0 +1,79 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add CE Smart",
+        "description": "Choose how to connect. Cloud imports every device linked to your Tuya IoT project and includes the vendor's energy statistics. Local controls a single device over your LAN with its local key, fully offline.",
+        "menu_options": {
+          "cloud": "Cloud account (import all devices)",
+          "local": "Local device (single device, offline)"
+        }
+      },
+      "local": {
+        "title": "Add a local CE Smart device",
+        "description": "Enter the device's local connection details. The Device ID and Local key come from your own Tuya IoT account (see the README). The device needs a fixed/reserved IP on your LAN.",
+        "data": {
+          "name": "Name",
+          "device_id": "Device ID",
+          "local_key": "Local key",
+          "host": "IP address",
+          "protocol_version": "Protocol version",
+          "device_type": "Device type"
+        },
+        "data_description": {
+          "protocol_version": "Most CE Smart devices use 3.3. Newer firmware may use 3.4 or 3.5. If polling fails, try another version.",
+          "device_type": "Choose Light for bulbs. Switch/Plug exposes relays and energy sensors. Generic exposes every datapoint."
+        }
+      },
+      "cloud": {
+        "title": "Connect your Tuya IoT project",
+        "description": "Create a free project at iot.tuya.com, link your CE Smart app account to it, and paste the project's Access ID and Access Secret here. See the README for the full walkthrough.",
+        "data": {
+          "region": "Data centre",
+          "access_id": "Access ID / Client ID",
+          "access_secret": "Access Secret / Client Secret"
+        },
+        "data_description": {
+          "region": "Pick the data centre your CE Smart account is registered in. North America = Western America (US)."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the device. Check the IP address, local key and protocol version, and that the device is on the same network.",
+      "cloud_auth": "Could not authenticate with Tuya. Check the Access ID/Secret, the data centre, and that an app account is linked to the project.",
+      "no_devices": "Connected, but no devices were found. Make sure your CE Smart app account is linked to the project and has devices.",
+      "unknown": "Unexpected error. See the Home Assistant log for details."
+    },
+    "abort": {
+      "already_configured": "This device or account is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "CE Smart options",
+        "data": {
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    }
+  },
+  "selector": {
+    "device_type": {
+      "options": {
+        "switch": "Switch",
+        "plug": "Plug / outlet",
+        "light": "Light / bulb",
+        "generic": "Generic"
+      }
+    },
+    "region": {
+      "options": {
+        "us": "Western America (US)",
+        "eu": "Central Europe (EU)",
+        "cn": "China",
+        "in": "India"
+      }
+    }
+  }
+}
