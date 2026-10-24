@@ -1,0 +1,14 @@
+{
+  "domain": "ce_smart",
+  "name": "CE Smart (Local)",
+  "codeowners": ["@akramercury"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/akramercury/ha-ce-smart",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/akramercury/ha-ce-smart/issues",
+  "loggers": ["tinytuya", "tuya_iot"],
+  "requirements": ["tinytuya==1.13.2", "tuya-iot-py-sdk==0.6.6"],
+  "version": "1.0.0"
+}

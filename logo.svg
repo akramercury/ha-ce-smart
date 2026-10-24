@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 256" width="1024" height="256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF8A3D"/>
+      <stop offset="0.55" stop-color="#F0610F"/>
+      <stop offset="1" stop-color="#C4440A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- mark -->
+  <g transform="translate(16,16) scale(0.4375)">
+    <rect x="0" y="0" width="464" height="464" rx="108" fill="url(#bg)"/>
+    <path d="M232 80 L380 200 L344 200 L344 188 L232 126 L120 188 L120 200 L84 200 Z" fill="#fff"/>
+    <path d="M136 200 L328 200 L328 368 Q328 380 316 380 L148 380 Q136 380 136 368 Z" fill="#fff"/>
+    <g fill="none" stroke="#F0610F" stroke-width="26" stroke-linecap="round">
+      <path d="M232 244 L232 294"/>
+      <path d="M190 262 A58 58 0 1 0 274 262"/>
+    </g>
+  </g>
+
+  <!-- wordmark -->
+  <g font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+    <text x="244" y="150" font-size="104" font-weight="800" fill="#2B2B2B" letter-spacing="-2">CE Smart</text>
+    <text x="246" y="206" font-size="40" font-weight="600" fill="#F0610F" letter-spacing="6">LOCAL FOR HOME ASSISTANT</text>
+  </g>
+</svg>
